@@ -1,20 +1,39 @@
 import logo from "../assets/youtube_img1.png";
-import { Menu, Upload, Bell, User, Search, Mic } from "lucide-react";
+import { Menu, Upload, Bell, User, Search, Mic, ArrowLeft } from "lucide-react";
 import { Button } from "../components/button";
+import { useState } from "react";
 
 export function PageHeader() {
+  const [showFullWidhtSearch, setShowFullWidthSearch] = useState(false);
   return (
-    <div className="flex gap-10 lg:gap-20 justify-between pt-2 mb-6 mx-4 ">
-      <div className="flex gap-4 items-center flex-shrink-0">
+    <div className="flex gap-10 lg:gap-20 justify-between pt-2 mb-3 mx-2 ">
+      <div
+        className={`gap-2 items-center flex-shrink-0 ${
+          showFullWidhtSearch ? "hidden" : "flex"
+        }`}
+      >
         <Button variant="ghost" size="icon" className="h-12">
           <Menu></Menu>
         </Button>
         <a href="/">
-          <img src={logo} className="h-12" />
+          <img src={logo} className="h-12 w-18" />
         </a>
       </div>
-      <form className="flex gap-4 flex-grow justify-center h-9 mt-1">
+      <form
+        className={`gap-4 flex-grow justify-center h-9 mt-1 ${
+          showFullWidhtSearch ? "flex" : "hidden md:flex"
+        }`}
+      >
         <div className="flex flex-grow max-w-[600px] ">
+          <Button
+            onClick={() => setShowFullWidthSearch(false)}
+            variant="ghost"
+            size="icon"
+            type="button"
+            className="flex-shrink-0"
+          >
+            <ArrowLeft />
+          </Button>
           <input
             type="search"
             placeholder="Search"
@@ -31,7 +50,23 @@ export function PageHeader() {
           </Button>
         </div>
       </form>
-      <div className="flex flex-shrink-0 md:gap-2">
+      <div
+        className={`flex flex-shrink-0 md:gap-2 ${
+          showFullWidhtSearch ? "hidden" : "flex"
+        }`}
+      >
+        <Button
+          onClick={() => setShowFullWidthSearch(true)}
+          variant="ghost"
+          size="icon"
+          className="md:hidden"
+        >
+          <Search />
+        </Button>
+        <Button variant="ghost" size="icon" className="md:hidden">
+          <Mic />
+        </Button>
+
         <Button variant="ghost" size="icon">
           <Upload />
         </Button>
