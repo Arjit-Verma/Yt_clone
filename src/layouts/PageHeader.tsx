@@ -6,7 +6,7 @@ import { useState } from "react";
 export function PageHeader() {
   const [showFullWidhtSearch, setShowFullWidthSearch] = useState(false);
   return (
-    <div className="flex gap-10 lg:gap-20 justify-between pt-2 mb-3 mx-2 ">
+    <div className="flex gap-10 lg:gap-20 justify-between pt-2 mb-3t mx-2 ">
       <div
         className={`gap-2 items-center flex-shrink-0 ${
           showFullWidhtSearch ? "hidden" : "flex"
