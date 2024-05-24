@@ -150,3 +150,44 @@ export const videos = [
     videoUrl: "https://www.example.com/video9",
   },
 ];
+
+export const subscriptions = [
+  {
+    channelName: "Fireship",
+    id: "Fireship",
+    imgUrl: thumbnail1,
+  },
+  {
+    channelName: "Caleb Curry",
+    id: "CalebCurry",
+    imgUrl: thumbnail2,
+  },
+  {
+    channelName: "Web Dev Simplified",
+    id: "WebDevSimplified",
+    imgUrl: thumbnail3,
+  },
+  {
+    channelName: "Kevin Powell",
+    id: "KevinPowell",
+    imgUrl: thumbnail4,
+  },
+  {
+    channelName: "Sonny Sangha",
+    id: "SonnySangha",
+    imgUrl: thumbnail5,
+  },
+  {
+    channelName: "Traversy Media",
+    id: "TraversyMedia",
+    imgUrl: thumbnail6,
+  },
+];
+
+export const playlists = [
+  { id: "1", name: "Frontend & Backend" },
+  { id: "2", name: "Favorites" },
+  { id: "3", name: "React" },
+  { id: "4", name: "Non-Dev" },
+  { id: "5", name: "TypeScript" },
+];
