@@ -47,11 +47,10 @@ export const videos = [
   },
   {
     id: 142,
-    title:
-      "How to Create The YouTube Home Page With Tailwind,React, and Typescript",
+    title: "Doin Your Mom",
     channel: {
-      name: "Web Dev Simplified",
-      id: "WeDevSimplifed",
+      name: "Your Homie",
+      id: "YourHomie",
       profileUrl: thumbnail2,
     },
     views: 250000,
